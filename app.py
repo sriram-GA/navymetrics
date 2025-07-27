@@ -47,15 +47,16 @@ elif pages=='Home':
         st.header("Pulse checker")
         if st.button("click here to check your PC"):
             ps.check_pulse(st.session_state.pulse)
+    st.caption("You can view all outputs below, or click the buttons above to see specific results.")
+    import pdf_gen
+
+    details = {...}
+    results = {...}
+    pdf_gen.pd(details, results)
     
 elif pages == 'contact us':
     tr.contactus()
-st.caption("You can view all outputs below, or click the buttons above to see specific results.")
-import pdf_gen
 
-details = {...}
-results = {...}
-pdf_gen.pd(details, results)
 
 
 
