@@ -50,6 +50,7 @@ elif pages=='Home':
     
 elif pages == 'contact us':
     tr.contactus()
+st.caption("You can view all outputs below, or click the buttons above to see specific results.")
 import pdf_gen
 
 details = {...}
