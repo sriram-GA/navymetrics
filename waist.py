@@ -9,18 +9,17 @@ def wf(waist, hip, gender):
       v = None
       if gender == 'Male':
         if a <= 0.90:
-            v = "Good (Low Risk)"
+            st.success( f"{a}-Good (Low Risk) 😇")
         elif a <= 0.95:
-            v = "Average (Moderate Risk)"
+            st.warning(f"{a}-Average (Moderate Risk)😵‍💫")
         else:
-            v = "High Risk (Bad)"
+            st.error(f"{a}-High Risk (Bad)☠️")
       elif gender == 'Female':
         if a <= 0.80:
-            v = "Good (Low Risk)"
+            st.success( f"{a}-Good (Low Risk) 😇")
         elif a <= 0.85:
-            v = "Average (Moderate Risk)"
+            st.warning(f"{a}-Average (Moderate Risk) 😵‍💫")
         else:
-            v = "High Risk (Bad)"
-      st.success(f"Waist to hip ratio:{a:.2f}-{v}")
+            st.error(f"{a}-High Risk (Bad) ☠️")
       st.info('''Waist-to-Hip Ratio is a general health indicator and not a medical diagnosis. It may not reflect muscle mass or individual differences. Consult a healthcare professional for accurate health assessments.''')
       return f"Waist to hip ratio:{a:.2f}-{v}"

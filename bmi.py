@@ -10,21 +10,20 @@ def bmi(h,w):
     else:
         bmi=(w/(h*h))
         if bmi < 18.5:
-            category = "Underweight"
+             st.error(f"{bmi}-Underweight 🤕")
         elif bmi < 25:
-            category = "Normal weight"
+            st.success(f"{bmi}-Normal weight 😀")
         elif bmi < 30:
-            category = "Overweight"
+            st.warning(f"{bmi}-Overweight 😖")
         elif bmi < 35:
-            category = "Obesity (Class 1)"
+            st.error(f"{bmi}-Obesity (Class 1) 😰")
         elif bmi < 40:
-            category = "Obesity (Class 2)"
+            st.error(f"{bmi}Obesity (Class 2) 💀")
         else:
-            category = "Extreme obesity"
-        st.success(f"Body mass index:{bmi:.2f}-{category}")
+            st.error(f"{bmi}-Extreme obesity ☠️")
         st.info("""
 **Diclaimer:** BMI is a rough estimate and may not accurately reflect your health condition.
 It does not distinguish between weight from fat and weight from muscle.
 """)
-        return f"{bmi:.2f} you are {category}"
+        return f"{bmi:.2f}"
 
