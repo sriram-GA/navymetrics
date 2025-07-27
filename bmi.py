@@ -21,9 +21,10 @@ def bmi(h,w):
             category = "Obesity (Class 2)"
         else:
             category = "Extreme obesity"
-        st.success(f"{bmi:.2f} you are {category}")
+        st.success(f"Body mass index:{bmi:.2f}-{category}")
         st.info("""
-**Note:** BMI is a rough estimate and may not accurately reflect your health condition.
+**Diclaimer:** BMI is a rough estimate and may not accurately reflect your health condition.
 It does not distinguish between weight from fat and weight from muscle.
 """)
+        return f"{bmi:.2f} you are {category}"
 

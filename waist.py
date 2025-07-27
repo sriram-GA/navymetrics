@@ -21,4 +21,6 @@ def wf(waist, hip, gender):
             v = "Average (Moderate Risk)"
         else:
             v = "High Risk (Bad)"
-      st.success(f"{a:.2f} {v}")
+      st.success(f"Waist to hip ratio:{a:.2f}-{v}")
+      st.info('''Waist-to-Hip Ratio is a general health indicator and not a medical diagnosis. It may not reflect muscle mass or individual differences. Consult a healthcare professional for accurate health assessments.''')
+      return f"Waist to hip ratio:{a:.2f}-{v}"

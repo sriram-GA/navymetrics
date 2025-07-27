@@ -15,3 +15,4 @@ def check_pulse(pulse):
         result = "Poor (Fails Navy Standard – Possible Tachycardia)"
     
     st.success(f"Pulse: {pulse} bpm - {result}")
+    return f"Pulse: {pulse} bpm - {result}"
