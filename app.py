@@ -62,17 +62,17 @@ elif pages=='Home':
     if st.button("🔁 Reset All"):
         st.session_state.clear()
         st.rerun()
-    
+    st.subheader("📄 Export Report")
+    import pdf_gen
+    details = {...}
+    results = {...}
+    if st.button("Generate PDF Report"):
+        file_path = pd.pd(details, results)
+        with open(file_path, "rb") as f:
+            st.download_button("📥 Download Health Report PDF", f, file_name="Navymetrics_report.pdf")
 elif pages == 'contact us':
     tr.contactus()
-st.subheader("📄 Export Report")
-import pdf_gen
-details = {...}
-results = {...}
-if st.button("Generate PDF Report"):
-    file_path = pd.pd(details, results)
-    with open(file_path, "rb") as f:
-        st.download_button("📥 Download Health Report PDF", f, file_name="Navymetrics_report.pdf")
+
 
 
 
